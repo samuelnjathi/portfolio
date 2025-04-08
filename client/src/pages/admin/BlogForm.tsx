@@ -21,7 +21,8 @@ const BlogForm = () => {
     }
 
     const handleAddBlog = (e: React.FormEvent) => {
-        e.preventDefault()
+        e.preventDefault();
+        console.log(blogInput);
         addBlog(blogInput);
         setBlogInput({
             title: "",
