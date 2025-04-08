@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    background-color: #000000;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-right: 15px;
+}
+.links li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 20px ;
+    text-align: center;
+}
+.links a:hover, 
+.links a.active {
+    transform: scale(1.05);
+    background-color: #EB5F14;
+    border-radius: 5px; 
+}
+.menu-icon {
+    color: #ffffff;
+    display: none;
+    cursor: pointer;
+}

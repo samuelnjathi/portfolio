@@ -1,0 +1,79 @@
+
+.quick-links {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: #ffffff;
+}
+.quick-links h3 {
+    color: #EB5F14;
+}
+.quick-links ul {
+    list-style: none;
+    padding-left: 0px;
+}
+.quick-links ul li {
+    padding: 5px
+}
+.quick-links ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.quick-links ul li a:hover{
+    color: #EB5F14;
+    padding-left: 10px;
+}
+.resume-title {
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #222222;
+}
+.resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #EB5F14;
+    position: relative;
+}
+.resume-item h4 {
+    line-height: 18px;
+    font-size: 20px;
+    color:#EB5F14;
+    margin-bottom: 10px;
+}
+.resume-item h5 {
+    font-size: 16px;
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background: #e9c3ae;
+    color:#EB5F14
+}
+.resume-item p {
+    margin: 10px 0;
+    font-size: 17px;
+    font-weight: 200;
+}
+.resume-item ul {
+    padding-left: 20px;
+}
+.resume-item ul li {
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+.resume-item:last-child {
+    padding-bottom: 0;
+}
+.resume-item::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #EB5F14;
+    position: absolute;
+    left: -10px;
+    top: 0;
+}

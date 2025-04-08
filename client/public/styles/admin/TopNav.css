@@ -1,0 +1,15 @@
+.top-nav {
+  background-color: #f0f0f0;
+  color: #EB5F14;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.menu a {
+  color: #EB5F14;
+  text-decoration: none;
+  padding: 10px 20px;
+  float: right;
+}

@@ -1,0 +1,33 @@
+.blog-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 260px;
+}
+.blog-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #eb5f14;
+  
+}
+.blog-dashboard-header a {
+  background-color: #eb5f14;
+    text-decoration: none;
+  color: #ffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.blog-dashboard-header a:hover {
+  background-color: #f0f0f0;
+  color: #eb5f14;
+}
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
