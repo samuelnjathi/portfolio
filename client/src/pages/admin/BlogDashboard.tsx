@@ -1,4 +1,4 @@
-import BlogCard from "../../components/main/BlogCard";
+import AdminBlogCard from "../../components/admin/AdminBlogCard";
 import { Link } from "react-router-dom";
 import "../../../public/styles/admin/BlogDashboard.css";
 import { useContext } from "react";
@@ -14,7 +14,7 @@ const BlogDashboard = () => {
         </div> 
         <div className="blog-list">
             {blogs.map((blog) => (
-                <BlogCard key={blog.id} blog={blog} />
+                <AdminBlogCard key={blog.id} blog={blog} />
             ))}
         </div>  
     </div>

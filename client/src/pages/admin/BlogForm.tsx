@@ -1,8 +1,11 @@
 import { useState, useContext } from "react";
 import "../../../public/styles/admin/BlogForm.css";
 import { BlogContext } from "../../context/BlogContext";
+import { useNavigate } from 'react-router-dom';
 
 const BlogForm = () => {
+    const navigate = useNavigate()
+
     const { addBlog } = useContext(BlogContext);
     const [blogInput, setBlogInput] = useState({
         title: "",
@@ -30,6 +33,7 @@ const BlogForm = () => {
             image: "",
             date: ""
         });
+        navigate("/admin/blogs");
     }
   return (
     <div className="blog-form-container">

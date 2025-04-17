@@ -45,3 +45,19 @@
     margin-bottom: 2px;
     font-size: 14px;
 }
+.blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.blog-card-buttons {
+    padding: 5px;
+    margin-right: 5px;
+}
+.delete {
+    color: #e92222;
+    cursor: pointer;
+}
+.edit {
+    color: rgb(64, 64, 224);
+    cursor: pointer;
+}

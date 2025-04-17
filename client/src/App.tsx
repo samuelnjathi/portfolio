@@ -4,6 +4,7 @@ import Home from "./pages/main/Home";
 import About from "./pages/main/About";
 import { BrowserRouter, Route, Routes, } from "react-router-dom";
 import Blogs from "./pages/main/Blogs";
+import SingleBlogPage from "./pages/main/SingleBlogPage";
 import Books from "./pages/main/Books";
 import Projects from "./pages/main/Projects";
 import Contact from "./pages/main/Contact";
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/" element={<MainLayout><Home /></MainLayout>} />
           <Route path="/about" element={<MainLayout><About /></MainLayout>} />
           <Route path="/blogs" element={<MainLayout><Blogs /></MainLayout>} />
+          <Route path="/blog/:id" element={<MainLayout><SingleBlogPage /></MainLayout>} />
           <Route path="/books" element={<MainLayout><Books /></MainLayout>} />
           <Route path="/contact" element={<MainLayout><Contact /></MainLayout>} />
           <Route path="/projects" element={<MainLayout><Projects /></MainLayout>} />
