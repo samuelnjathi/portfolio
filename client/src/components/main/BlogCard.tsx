@@ -1,10 +1,8 @@
 import React from 'react';  
-import { Blog } from '../../types/definations';
+import { Link } from 'react-router-dom';
 import "../../../public/styles/main/BlogCard.css";
+import { BlogCardProps } from '../../types/definations';
 
-interface BlogCardProps {
-    blog: Blog;
-}
 
 const BlogCard: React.FC<BlogCardProps> = ({blog}) => {
     
@@ -16,10 +14,12 @@ const BlogCard: React.FC<BlogCardProps> = ({blog}) => {
             <div className="blog-card-body">
                 <p className="blog-card-date">{blog?.date}</p>
                 <h2 className="blog-card-title">{blog?.title}</h2>
-                <p className="blog-card-text">{blog?.content.substring(0, 100)}</p>
+                <p className="blog-card-text">{blog?.content.substring(0, 140)}...</p>
                 
             </div>
-            <button>Read More</button>
+            <Link to={`/blog/${blog.id}`}>
+                <button>Read More</button>
+            </Link>
                
         </div>
     )

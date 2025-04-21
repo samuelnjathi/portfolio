@@ -3,19 +3,19 @@ import { v4 as uuidv4 } from 'uuid';
 import { Blog } from '../types/definations';
 
 
-
 export const BlogContext = createContext<{
-  addBlog: (newBlog: { title: string; content: string; image: string; date: string }) => void;
+  addBlog: (newBlog: {title: string; content: string; image: string; date: string}) => void;
+  editBlog: (id:string, newBlog: {title: string; content: string; image: string; date: string}) => void;
   deleteBlog: (id: string) => void;
   blogs: Blog[];
 }>({
   addBlog: () => {},
+  editBlog: () => {},
   deleteBlog: () => {},
   blogs: [],
 });
 
-export const BlogProvider = ({children}: {children: React.ReactNode}) => {
-    
+export const BlogProvider = ({children}: {children: React.ReactNode}) => {   
     const [blogs, setBlogs] = useState<Blog[]>(() => {
       try {
         const storedBlogs = localStorage.getItem("blogs");
@@ -39,12 +39,18 @@ export const BlogProvider = ({children}: {children: React.ReactNode}) => {
         setBlogs((prev) => [...prev, {id: uuidv4(), ...newBlog}]);  
     }, []);
 
+    const editBlog = useCallback((id: string, newBlog: {title: string; content: string; image: string; date: string} ) => {
+        setBlogs(prev => 
+          prev.map(blog => blog.id === id ? {...blog, ...newBlog} : blog)
+        )
+    }, [])
+
     const deleteBlog = useCallback((id: string) => {
       setBlogs(prev => prev.filter(blog => blog.id !== id));
     }, []);
     
   return (
-    <BlogContext.Provider value={{addBlog, deleteBlog, blogs}}>
+    <BlogContext.Provider value={{addBlog, deleteBlog, editBlog, blogs}}>
       {children}
     </BlogContext.Provider>
   )

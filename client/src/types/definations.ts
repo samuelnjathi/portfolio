@@ -5,3 +5,7 @@ export type Blog = {
     image: string;
     date: string;
 }
+
+export interface BlogCardProps {
+    blog: Blog;
+}
