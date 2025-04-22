@@ -49,15 +49,15 @@
     display: flex;
     justify-content: space-between;
 }
-.blog-card-buttons {
+.card-buttons {
     padding: 5px;
     margin-right: 5px;
 }
-.delete {
+.delete-button {
     color: #e92222;
     cursor: pointer;
 }
-.edit {
+.edit-button {
     color: rgb(64, 64, 224);
     cursor: pointer;
 }

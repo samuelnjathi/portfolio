@@ -31,9 +31,9 @@ const BlogCard: React.FC<BlogCardProps> = ({blog}) => {
                 
                 <div>
                     <Link to={`/admin/blog/edit/${blog.id}`}>
-                        <EditIcon className="blog-card-buttons edit" />
+                        <EditIcon className="card-buttons edit-button" />
                     </Link>
-                    <DeleteIcon className="blog-card-buttons delete" onClick={() => deleteBlog(blog?.id)} /> 
+                    <DeleteIcon className="card-buttons delete-button" onClick={() => deleteBlog(blog?.id)} /> 
                 </div> 
             </div>
         </div>

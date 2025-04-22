@@ -1,7 +1,7 @@
 .books-card {
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 200px;
     border: 1px solid #eb5f14;
     border-radius: 10px;
     overflow: hidden;
@@ -19,8 +19,8 @@
     gap: 20px;
 }
 .books-card-body img {
-    height: 140px;
-    width: 120px;
+    height: 90px;
+    width: 200px;
     object-fit: cover;
 }
 .books-card-body p {
@@ -31,6 +31,21 @@
     justify-content: space-between;
     padding: 10px 20px;
 }
+.books-card-footer a {
+    color: #eb5f14
+}
 .book-card-author {
     color: #6B7280;
+}
+.card-buttons {
+    padding: 5px;
+    margin-right: 5px;
+}
+.delete-button {
+    color: #e92222;
+    cursor: pointer;
+}
+.edit-button {
+    color: rgb(64, 64, 224);
+    cursor: pointer;
 }

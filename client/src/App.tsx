@@ -14,12 +14,16 @@ import BookDashboard from "./pages/admin/BookDashboard";
 import ProjectDashboard from "./pages/admin/ProjectDashboard";
 import BlogForm from "./pages/admin/BlogForm";
 import EditBlog from "./pages/admin/EditBlog";
+import BookForm from "./pages/admin/BookForm";
+import EditBook from "./pages/admin/EditBook";
 import { BlogProvider } from "./context/BlogContext";
+import { BooksProvider } from "./context/BooksContext";
 
 export default function App() {
 
   return (
     <>
+    <BooksProvider>
     <BlogProvider>
       <BrowserRouter>
         <Routes>
@@ -34,13 +38,17 @@ export default function App() {
           <Route path="/admin/blogs" element={<AdminLayout><BlogDashboard /></AdminLayout>} />
           <Route path="/admin/blog/edit/:id" element={<AdminLayout><EditBlog /></AdminLayout>} />
           <Route path="/admin/books" element={<AdminLayout><BookDashboard /></AdminLayout>} />
+          <Route path="/admin/book/edit/:id" element={<AdminLayout><EditBook /></AdminLayout>} />
           <Route path="/admin/projects" element={<AdminLayout><ProjectDashboard /></AdminLayout>} />
           <Route path="/admin/blog-form" element={<AdminLayout><BlogForm /></AdminLayout>} />
+          <Route path="/admin/book-form" element={<AdminLayout><BookForm /></AdminLayout>} />
+
 
           
         </Routes>
       </BrowserRouter>
       </BlogProvider>
+      </BooksProvider>
     </>
   )
 }
